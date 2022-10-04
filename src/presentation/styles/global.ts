@@ -57,11 +57,6 @@ const GlobalStyles = createGlobalStyle`
     border-spacing: 0;
   }
 
-  @font-face {
-    font-family: 'Karla';
-    src: url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
-  }
-
   * {
     margin        : 0;
     padding       : 0;
@@ -69,7 +64,10 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family     : 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font: 400 1rem ${(props) => props.theme.font.families.default};
+      background: ${(props) => props.theme.colors.background};
+      color: ${(props) => props.theme.colors.textPrimary};
+      overflow-x: hidden;
   }
 
 `

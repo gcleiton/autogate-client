@@ -18,11 +18,15 @@
   "rules": {
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
+    "react/display-name": "off",
     "react/prop-types": 0,
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "@typescript-eslint/consistent-type-assertions": "off",
     "@typescript-eslint/consistent-type-definitions": "off",
-    "@typescript-eslint/strict-boolean-expressions": "off"
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "no-case-declarations": "off",
+    "@typescript-eslint/explicit-function-return-type": "off"
   }
 }

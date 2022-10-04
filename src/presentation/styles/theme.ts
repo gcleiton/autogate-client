@@ -36,7 +36,7 @@ export default {
   },
 
   colors: {
-    primary: '#03103b',
+    primary: '#25294C',
     gradientPrimary: 'rgba(64, 219, 216, 0.15)',
     gradientSecondary: 'rgba(3, 16, 59, 0.15)',
     blue: '#288ad6',
@@ -47,7 +47,11 @@ export default {
     orange: '#fe7c08',
     pink: '#ff708e',
     purple: '#8e44ad',
-    gray: '#95a5a6'
+    gray: '#95a5a6',
+    textPrimary: '#333333',
+    background: '#E9ECEF',
+    backgroundSecondary: '#F9F9F9',
+    danger: '#cc2937'
   },
 
   gradients: {
@@ -64,6 +68,13 @@ export default {
     xlarge: '1.8rem',
     xxlarge: '2.4rem',
     huge: '3rem'
+  },
+
+  opacities: {
+    normal: '100%',
+    intense: '75%',
+    medium: '50%',
+    light: '25%'
   },
 
   transitions: {

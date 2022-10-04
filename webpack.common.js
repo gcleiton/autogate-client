@@ -1,6 +1,7 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 const env = require('./env')
 
@@ -29,19 +30,27 @@ module.exports = {
             loader: '@svgr/webpack'
           }
         ]
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
-      '@': env.paths.source
+      '@modules': path.resolve(__dirname, 'src/modules'),
+      '@core': path.resolve(__dirname, 'src/core'),
+      '@presentation': path.resolve(__dirname, 'src/presentation'),
+      '@main': path.resolve(__dirname, 'src/main')
     }
   },
   plugins: [
     new CleanWebpackPlugin(),
     new FaviconsWebpackPlugin({
       logo: path.resolve(env.paths.public, 'favicon.svg')
-    })
+    }),
+    new Dotenv()
   ]
 }

@@ -2,14 +2,14 @@ import React, { forwardRef } from 'react'
 import { FormControl, Form } from 'react-bootstrap'
 import { Label } from '../../form'
 import { InputProps } from '../../types'
-import * as S from './input.styles'
+import * as S from './text-input.styles'
 
-const Input: React.FC<InputProps> = forwardRef(
+const TextInput: React.FC<InputProps> = forwardRef(
   ({ label, error, className, ...rest }, ref) => {
     const isInvalid = error !== undefined
 
     return (
-      <div className="mb-3">
+      <div>
         {label && <Label>{label}</Label>}
         <S.InputWrapper
           isInvalid={isInvalid}
@@ -29,4 +29,4 @@ const Input: React.FC<InputProps> = forwardRef(
   }
 )
 
-export default Input
+export default TextInput

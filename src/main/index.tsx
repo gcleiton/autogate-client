@@ -7,15 +7,22 @@ import Router from './routes/router'
 import { getCurrentAccount } from './adapters'
 
 import '../presentation/styles/overrides/custom-bootstrap.scss'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+
+const queryClient = new QueryClient()
 
 ReactDOM.render(
   <>
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <AuthProvider getCurrentAccount={getCurrentAccount}>
-        <Router />
-      </AuthProvider>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>
+        <ReactQueryDevtools initialIsOpen={false} />
+        <GlobalStyles />
+        <AuthProvider getCurrentAccount={getCurrentAccount}>
+          <Router />
+        </AuthProvider>
+      </ThemeProvider>
+    </QueryClientProvider>
   </>,
   document.getElementById('main')
 )

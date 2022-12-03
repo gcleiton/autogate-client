@@ -1,7 +1,7 @@
 import { rgba } from 'polished'
 import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
-import { media } from '@presentation/styles'
+import { mediaQuery } from '@presentation/styles'
 
 export const Container = styled.div`
   ${({ theme }) => css`
@@ -22,7 +22,7 @@ export const Card = styled.div`
 
     background-color: ${theme.colors.background};
 
-    ${media.greaterThan('mobile')`
+    ${mediaQuery.greaterThan('mobile')`
     /* Begin: centraliza horizontalmente e verticalmente */
     position: absolute;
     top: 50%;

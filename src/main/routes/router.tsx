@@ -1,45 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import { LoginPage } from '@modules/authentication'
-import { ProtectedRoute } from '@main/proxies'
-import { useAuth } from '@core/hooks'
-import { Account } from '@core/models'
+import { MainLayout } from '@presentation/components'
+import { HomePage } from '@modules/home'
 
 const Router: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/"
-          element={<ProtectedRoute element={<ProtectedPageTemp />} />}
-        />
         <Route path="/login" element={<LoginPage />} />
+
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<HomePage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
-  )
-}
-
-const ProtectedPageTemp: React.FC = () => {
-  const { getCurrentAccount } = useAuth()
-  const [account, setAccount] = useState<Account>()
-
-  useEffect(() => {
-    setAccount(getCurrentAccount())
-  }, [])
-
-  return (
-    <>
-      <h1>Logado com sucesso!</h1>
-      <div>
-        <strong>Nome: </strong>
-        {account?.name}
-      </div>
-      <div>
-        <strong>Email: </strong>
-        {account?.email}
-      </div>
-    </>
   )
 }
 

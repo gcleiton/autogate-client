@@ -54,7 +54,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "favicons": "^6.2.2",
+    "favicons": "^7.0.2",
     "favicons-webpack-plugin": "^5.0.2",
     "gh-pages": "^4.0.0",
     "git-commit-msg-linter": "^3.2.6",

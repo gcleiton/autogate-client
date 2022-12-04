@@ -7507,10 +7507,10 @@ gifwrap@^0.9.2:
     image-q "^4.0.0"
     omggif "^1.0.10"
 
-git-commit-msg-linter@^3.2.6:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/git-commit-msg-linter/-/git-commit-msg-linter-3.3.3.tgz#5cb7d5aa71541ebcc57a75f0ead5008c6b43dabf"
-  integrity sha512-XQ5iqnrmEo4hbAqbtANpJw1E9e2vmXE+tFgYYs7iORqGFwNGY9ns0dI/SwxYAMxybM7B3OVVceXBYTUKpDFlOw==
+git-commit-msg-linter@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/git-commit-msg-linter/-/git-commit-msg-linter-4.4.0.tgz#daa2bba3a4f535ae219436b63818a124fc2c9cb5"
+  integrity sha512-VaeDZTYfCJPQW7G9ZbEEAe7q+JOJO/QHGkl/WGUVSrwXXe/D7zuJ/RZ5a7cN4nxM7UBPC54vAJPq8xnOvRrlgA==
   dependencies:
     chalk "^2.4.2"
     did-you-mean "^0.0.1"
@@ -14489,10 +14489,8 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
-    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"

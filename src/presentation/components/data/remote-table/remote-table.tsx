@@ -1,24 +1,13 @@
-import { PaginationFunction } from '@core/types'
+import React, { useState } from 'react'
+import DataTable, { TableColumn } from 'react-data-table-component'
 import {
   TableWrapper,
   TableNoData,
   TableLoading
 } from '@presentation/components'
-import React, { useState } from 'react'
-import DataTable, {
-  TableColumn,
-  TableProps as ReactDataTableProps
-} from 'react-data-table-component'
+import { RemoteTableProps } from '@presentation/components/types'
 
-type TableProps = ReactDataTableProps<any>
-
-type Props = TableProps & {
-  fetchData: PaginationFunction
-  totalItems: number
-  isLoading?: boolean
-}
-
-const RemoteTable: React.FC<Props> = ({
+const RemoteTable: React.FC<RemoteTableProps> = ({
   fetchData,
   totalItems,
   isLoading,

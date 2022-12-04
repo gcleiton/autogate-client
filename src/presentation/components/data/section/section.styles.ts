@@ -12,7 +12,7 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   color: ${(props) => props.theme.colors.textPrimary};
-  font-size: ${(props) => props.theme.font.sizes.xlarge};
+  font-size: ${(props) => props.theme.font.sizes.large};
   font-weight: 500;
   margin: 0.6rem 0;
 `

@@ -7,5 +7,8 @@ export const env = {
     autogate: {
       baseUrl: process.env.AUTOGATE_API_BASE_URL
     }
+  },
+  hubs: {
+    transitoCatraca: process.env.HUB_TRANSITO_CANCELA
   }
 }
